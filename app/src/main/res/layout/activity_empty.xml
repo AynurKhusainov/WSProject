@@ -5,7 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmptyActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/name1"
+        android:layout_width="match_parent"
+        android:background="#232323"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#232323">
+
+            <TextView
+                android:id="@+id/bank1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Сергей Владимирович"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
+        android:layout_below="@id/name1"
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

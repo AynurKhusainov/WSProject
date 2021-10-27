@@ -15,9 +15,9 @@ import com.example.myapplication.R;
 
 import java.util.ArrayList;
 
-public class ListAdapter extends ArrayAdapter<Users> {
+public class ListAdapter extends ArrayAdapter<BankModel> {
 
-    public ListAdapter(Context context, ArrayList<Users> userArrayList){
+    public ListAdapter(Context context, ArrayList<BankModel> userArrayList){
 
         super(context, R.layout.bank_items,userArrayList);
 
@@ -27,7 +27,7 @@ public class ListAdapter extends ArrayAdapter<Users> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        Users user = getItem(position);
+        BankModel user = getItem(position);
 
         if (convertView == null){
 

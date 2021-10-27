@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.Banks.Banks;
-import com.example.myapplication.Valutes.Valutes;
+import com.example.myapplication.Valutes.Valute;
 
 import java.util.Date;
 
@@ -38,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ll(View view) {
-        startActivity(new Intent(MainActivity.this, Valutes.class));
+        startActivity(new Intent(MainActivity.this, Valute.class));
     }
 
     public void onClick(View v) {
 
         androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this, R.style.Theme_MyAlertDialog);
         LayoutInflater layoutInflater = getLayoutInflater();
-        View viewAlert = layoutInflater.inflate(R.layout.alert_dialog_reset_password, null);
+        View viewAlert = layoutInflater.inflate(R.layout.alert_dialog_sign_in, null);
         builder.setView(viewAlert).setCancelable(true);
         AlertDialog alertDialog = builder.create();
 

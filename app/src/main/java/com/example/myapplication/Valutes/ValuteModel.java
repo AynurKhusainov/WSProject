@@ -1,11 +1,11 @@
 package com.example.myapplication.Valutes;
 
-public class Person {
+public class ValuteModel {
 
     String name, lastMessage, lastMsgTime, phoneNo, country;
     int imageId;
 
-    public Person(String name, String lastMessage, String lastMsgTime, String phoneNo, String country, int imageId) {
+    public ValuteModel(String name, String lastMessage, String lastMsgTime, String phoneNo, String country, int imageId) {
         this.name = name;
         this.lastMessage = lastMessage;
         this.lastMsgTime = lastMsgTime;

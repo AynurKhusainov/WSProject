@@ -1,4 +1,4 @@
-package com.example.myapplication.HomeList;
+package com.example.myapplication.Valutes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,33 +15,28 @@ import com.example.myapplication.R;
 
 import java.util.ArrayList;
 
-public class ListAdapter extends ArrayAdapter<Models> {
-    public ListAdapter(Context context, ArrayList<Models> modelsArrayList) {
-        super(context, R.layout.activity_home_items,modelsArrayList);
-
+public class ValAdapter extends ArrayAdapter<ValuteModel> {
+    public ValAdapter(Context context, ArrayList<ValuteModel> valuteModelArrayList) {
+        super(context, R.layout.valutes_item,valuteModelArrayList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        ValuteModel valuteModel=getItem(position);
 
-        Models models=getItem(position);
-
-        if (convertView == null){
-
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_home_items,parent,false);
-
+        if (convertView==null){
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.valutes_item,parent,false);
         }
-
         ImageView imageView = convertView.findViewById(R.id.profile_pic);
         TextView userName = convertView.findViewById(R.id.personName);
         TextView lastMsg = convertView.findViewById(R.id.lastMessage);
         TextView time = convertView.findViewById(R.id.msgtime);
 
-        imageView.setImageResource(models.imageId);
-        userName.setText(models.name);
-        lastMsg.setText(models.lastMessage);
-        time.setText(models.lastMsgTime);
+        imageView.setImageResource(valuteModel.imageId);
+        userName.setText(valuteModel.name);
+        lastMsg.setText(valuteModel.lastMessage);
+        time.setText(valuteModel.lastMsgTime);
 
         return convertView;
     }

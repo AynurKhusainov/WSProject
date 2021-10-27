@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Profile.Profile"
+xmlns:tools="http://schemas.android.com/tools">
+
+<ListView
+    android:id="@+id/profile_list"
+    tools:listitem="@layout/profile_items"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/information"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Информация о приложении"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#323232"
+        android:layout_height="match_parent"/>
+</LinearLayout>

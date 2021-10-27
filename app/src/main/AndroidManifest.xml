@@ -12,16 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".HomeList.Cards"
-            android:exported="false" />
-        <activity
-            android:name=".HomeItems"
-            android:exported="false" />
-        <activity
             android:name=".EmptyActivity"
             android:exported="true" />
         <activity
             android:name=".Banks.Banks"
+            android:exported="false" />
+        <activity
+            android:name=".Valutes.Valute"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -32,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Profile.ProfileAdapter" />
     </application>
 
 </manifest>
