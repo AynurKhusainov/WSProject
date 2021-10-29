@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:clickable="false"
         android:id="@+id/mycards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,12 +39,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/exampleBut"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/black"
-                android:clickable="true" />
             <RelativeLayout
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
@@ -60,119 +55,122 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Дебетовая карта" />
-
                 <ImageView
                     android:id="@+id/cardImg11"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_below="@id/card11"
                     android:background="@color/black" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/card11"
                     android:layout_toRightOf="@+id/cardImg11"
                     android:text="1234***4321" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:text="22000,00 рублей" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_below="@+id/cardImg11"
                     android:layout_marginTop="5dp"
                     android:background="@color/black" />
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/card2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="60dp">
+                <ImageButton
+                    android:id="@+id/thirdButtonSecondCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:clickable="true" />
                 <TextView
                     android:id="@+id/card22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Дебетовая карта" />
-
                 <ImageView
                     android:id="@+id/cardImg22"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_below="@id/card22"
                     android:background="@color/black" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/card22"
                     android:layout_toRightOf="@+id/cardImg22"
                     android:text="1234***4321" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:text="22000,00 рублей" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_below="@+id/cardImg22"
                     android:layout_marginTop="5dp"
                     android:background="@color/black" />
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/card3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="60dp">
 
+                <ImageButton
+                    android:id="@+id/thirdButtonThirdCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:clickable="true" />
                 <TextView
                     android:id="@+id/card33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Дебетовая карта" />
-
                 <ImageView
                     android:id="@+id/cardImg33"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_below="@id/card33"
                     android:background="@color/black" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/card33"
                     android:layout_toRightOf="@+id/cardImg33"
                     android:text="1234***4321" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:text="22000,00 рублей" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_below="@+id/cardImg33"
                     android:layout_marginTop="5dp"
                     android:background="@color/black" />
+
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 
     <RelativeLayout
+        android:clickable="false"
         android:id="@+id/mychek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -275,6 +273,7 @@
     </ScrollView>
 
     <RelativeLayout
+        android:clickable="false"
         android:id="@+id/mycredit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,5 +1,7 @@
 package com.example.myapplication.Valutes;
 
+import com.example.myapplication.Fragments.FirstCardFragment;
+
 public class ValuteModel {
 
     String name, lastMessage, lastMsgTime, phoneNo, country;

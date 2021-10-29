@@ -1,5 +1,6 @@
 package com.example.myapplication.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,10 +28,34 @@ public class FirstFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile()).commit();
             }
         });
+        ImageButton CardBut= v.findViewById(R.id.thirdButton);
+        ImageButton CardButSec= v.findViewById(R.id.thirdButtonSecondCard);
+        ImageButton CardButThird= v.findViewById(R.id.thirdButtonThirdCard);
 
+        CardBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ThirdFragment()).commit();
+            }
+        });
+
+        CardButSec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ThirdFragment()).commit();
+            }
+        });
+
+        CardButThird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new ThirdFragment()).commit();
+            }
+        });
 
         return v;
     }
+
 
 
 }

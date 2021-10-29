@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FirstCardFragment">
+
+    <RelativeLayout
+        android:id="@+id/cardbank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200">
+
+        <ImageButton
+            android:id="@+id/CardImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CardImg">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Пополнить" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Перевести" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/historyRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardbank">
+
+        <ImageButton
+            android:id="@+id/historyOperation1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="История операций" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/LineCard1"
+        android:layout_below="@id/historyRel"
+        android:layout_width="match_parent"
+        android:background="#A3A3A3"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/BlockCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LineCard1">
+
+        <ImageButton
+            android:id="@+id/Block"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Заблокировать" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/LineCard2"
+        android:layout_below="@id/BlockCard"
+        android:layout_width="match_parent"
+        android:background="#A3A3A3"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/RenameCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LineCard2">
+
+        <ImageButton
+            android:id="@+id/Rename"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Переименовать" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/lineCArd"
+        android:layout_below="@id/RenameCard"
+        android:layout_width="match_parent"
+        android:background="#A3A3A3"
+        android:layout_height="1dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lineCArd"
+        android:background="#4C4C4C" />
+</RelativeLayout>

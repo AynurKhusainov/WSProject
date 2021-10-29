@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".Profile.Profile"
-xmlns:tools="http://schemas.android.com/tools">
-
-<ListView
-    android:id="@+id/profile_list"
-    tools:listitem="@layout/profile_items"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
-    <RelativeLayout
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Profile.Profile">
+
+
+    <Button
+        android:text="Изменение пароля"
+        android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/white" />
 
-        <ImageButton
-            android:id="@+id/information"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <Button
+        android:text="Изменение логина"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Информация о приложении"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:text="История посещений"
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
 
-    </RelativeLayout>
+    <Button
+        android:text="Информация о приложений"
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
+
+    <Button
+        android:text="Выход"
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
+
     <View
         android:layout_width="match_parent"
-        android:background="#323232"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="#323232" />
 </LinearLayout>
