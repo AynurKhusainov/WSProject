@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 public class ListAdapter extends ArrayAdapter<BankModel> {
 
-    public ListAdapter(Context context, ArrayList<BankModel> userArrayList){
+    public ListAdapter(Context context, ArrayList<BankModel> userArrayList) {
 
-        super(context, R.layout.bank_items,userArrayList);
+        super(context, R.layout.bank_items, userArrayList);
 
     }
 
@@ -29,9 +29,9 @@ public class ListAdapter extends ArrayAdapter<BankModel> {
 
         BankModel user = getItem(position);
 
-        if (convertView == null){
+        if (convertView == null) {
 
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.bank_items,parent,false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.bank_items, parent, false);
 
         }
 
