@@ -29,7 +29,7 @@ public class Banks extends AppCompatActivity {
         String[] phoneNo = {"7656610000", "9999043232", "7834354323", "9876543211", "5434432343",
                 "9439043232"};
         String[] country = {"United States", "Russia", "India", "Canada", "France", "Switzerland"};
- // e
+
         ArrayList<BankModel> bankModelArrayList = new ArrayList<>();
         for (int i = 0; i < imageId.length; i++) {
 

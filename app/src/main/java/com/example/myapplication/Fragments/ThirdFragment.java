@@ -30,7 +30,7 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v= inflater.inflate(R.layout.fragment_third,container,false);
+        v = inflater.inflate(R.layout.fragment_third, container, false);
 
         tabLayout = v.findViewById(R.id.tab_layout);
         pager2 = v.findViewById(R.id.view_pager2);
@@ -42,7 +42,6 @@ public class ThirdFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.addTab(tabLayout.newTab().setText(""));
         tabLayout.addTab(tabLayout.newTab().setText(""));
-
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -61,7 +60,6 @@ public class ThirdFragment extends Fragment {
 
             }
         });
-
 
         pager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

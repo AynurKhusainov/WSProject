@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -44,8 +45,13 @@ public class FirstCardFragment extends Fragment {
         ImageButton block=v.findViewById(R.id.Block);
 
         block.setOnClickListener(new View.OnClickListener() {
+
+            EditText password;
+            String text;
             @Override
             public void onClick(View v) {
+                text="qqq";
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.Theme_MyAlertDialog);
                 LayoutInflater inflater = getLayoutInflater();
                 viewAlert = inflater.inflate(R.layout.profile_alert_dialog, null);
@@ -54,13 +60,15 @@ public class FirstCardFragment extends Fragment {
                 builder.setView(viewAlert).setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
+                password=viewAlert.findViewById(R.id.passwordd);
 
                 buttonSave.setOnClickListener(vSave -> {
-
-                    RelativeLayout s = FirstCardFragment.v.findViewById(R.id.cardbank);
-                    s.setVisibility(View.GONE);
-
-                    alertDialog.dismiss();
+                    if (password.getText().toString().equals(text)) {
+                        RelativeLayout s = FirstCardFragment.v.findViewById(R.id.functions);
+                        s.setVisibility(View.GONE);
+                    }
+                    else{
+                    alertDialog.dismiss();}
                 });
             }
         });
