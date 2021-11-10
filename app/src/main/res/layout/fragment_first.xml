@@ -73,6 +73,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:text="22000,00 рублей" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -86,6 +87,7 @@
                 android:id="@+id/card2"
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
+
                 <ImageButton
                     android:id="@+id/thirdButtonSecondCard"
                     android:layout_width="match_parent"
