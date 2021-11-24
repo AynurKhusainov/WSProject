@@ -45,7 +45,6 @@ public class ListAdapter extends ArrayAdapter<BankModel> {
         lastMsg.setText(user.lastMessage);
         time.setText(user.lastMsgTime);
 
-
         return convertView;
     }
 }

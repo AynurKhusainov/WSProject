@@ -50,12 +50,13 @@
         <entry key="app/src/main/res/layout/fragment_second_card.xml" value="0.525" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.3223958333333333" />
         <entry key="app/src/main/res/layout/fragment_third_card.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/layout_small.xml" value="0.5169230769230769" />
         <entry key="app/src/main/res/layout/profile_alert_dialog.xml" value="0.525" />
         <entry key="app/src/main/res/layout/profile_items.xml" value="0.525" />
         <entry key="app/src/main/res/layout/profile_list.xml" value="0.525" />
         <entry key="app/src/main/res/layout/valutes.xml" value="0.5" />
         <entry key="app/src/main/res/layout/valutes_item.xml" value="0.3223958333333333" />
-        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.525" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="1.275" />
       </map>
     </option>

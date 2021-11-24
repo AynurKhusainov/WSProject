@@ -32,6 +32,9 @@ public class FirstCardFragment extends Fragment {
     Button buttonSave;
     ProgressBar progressBarDataUser;
     AlertDialog alertDialog;
+    private SharedPreferences pref;
+    EditText password;
+    String text;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +44,8 @@ public class FirstCardFragment extends Fragment {
             v = inflater.inflate(R.layout.fragment_first_card, container, false);
 
         ImageButton history = v.findViewById(R.id.historyOperation);
+
+
 
         history.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +57,7 @@ public class FirstCardFragment extends Fragment {
 
         block.setOnClickListener(new View.OnClickListener() {
 
-            EditText password;
-            String text;
+
 
             @Override
             public void onClick(View v) {
@@ -67,7 +71,6 @@ public class FirstCardFragment extends Fragment {
                 builder.setView(viewAlert).setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
-                password = viewAlert.findViewById(R.id.passwordd);
 
                 buttonSave.setOnClickListener(vSave -> {
                     if (password.getText().toString().equals("123")) {
@@ -85,6 +88,7 @@ public class FirstCardFragment extends Fragment {
 
         rename.setOnClickListener(new View.OnClickListener() {
             EditText password;
+
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.Theme_MyAlertDialog);
@@ -97,18 +101,17 @@ public class FirstCardFragment extends Fragment {
                 alertDialog.show();
                 password = viewAlert.findViewById(R.id.passwordd);
 
-                TextView name=FirstCardFragment.v.findViewById(R.id.cardname);
+                pref = getContext().getSharedPreferences("text", Context.MODE_PRIVATE);
 
                 buttonSave.setOnClickListener(vSave -> {
 
-                    SharedPreferences.Editor editor = getContext().getSharedPreferences("SHARED_NAME_STRING", Context.MODE_PRIVATE).edit();
-                    editor.putString(name.toString(), password.getText().toString());
-                    editor.apply();
+                    SharedPreferences.Editor edit = pref.edit();
+                    edit.putString("text", password.getText().toString());
+                    edit.apply();
 
+                    TextView name = FirstCardFragment.v.findViewById(R.id.cardname);
+                    name.setText(pref.getString("text", "null"));
 
-                    SharedPreferences prefs = getContext().getSharedPreferences("SHARED_NAME_STRING", Context.MODE_PRIVATE);
-                    String loadedString = prefs.getString(name.toString(), null);
-                    name.setText(password.getText().toString());
                     alertDialog.dismiss();
                 });
             }
